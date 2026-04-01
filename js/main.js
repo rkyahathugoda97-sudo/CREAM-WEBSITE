@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
             }
         });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
     }
 
     // Cart Sidebar Logic
