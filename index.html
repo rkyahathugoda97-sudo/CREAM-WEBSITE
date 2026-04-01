@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreaM | Premium Skincare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { light: '#fdfbfb', pink: '#f8d1d8', rose: '#d98b9b', dark: '#3d2c2e' }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brand-light text-brand-dark font-sans overflow-x-hidden">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full flex justify-between items-center py-4 px-6 md:px-12 z-50 transition-all duration-300">
+        <a href="index.html" class="font-serif text-3xl font-semibold tracking-wide flex items-center gap-2">
+            <span class="text-brand-rose">D</span>reaM
+        </a>
+        <div class="hidden md:flex gap-10 items-center text-xs font-medium tracking-[0.2em] uppercase">
+            <a href="index.html" class="hover:text-brand-rose transition active-link">Home</a>
+            <a href="about.html" class="hover:text-brand-rose transition">Story</a>
+            <a href="shop.html" class="hover:text-brand-rose transition">Shop</a>
+            <a href="contact.html" class="hover:text-brand-rose transition">Contact</a>
+        </div>
+        <div class="flex gap-6 items-center">
+            <button id="cart-btn" class="relative hover:text-brand-rose transition">
+                <i class="fa-solid fa-bag-shopping text-xl"></i>
+                <span id="cart-count" class="absolute -top-2 -right-2 bg-brand-rose text-white rounded-full text-[10px] w-4 h-4 flex items-center justify-center hidden">0</span>
+            </button>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-light/95 backdrop-blur z-40 hidden flex-col justify-center items-center text-xl font-serif gap-8 opacity-0 transition-opacity">
+        <a href="index.html" class="hover:text-brand-rose text-brand-rose">Home</a>
+        <a href="about.html" class="hover:text-brand-rose">Our Story</a>
+        <a href="shop.html" class="hover:text-brand-rose">Shop</a>
+        <a href="contact.html" class="hover:text-brand-rose">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero_img.png" alt="Aesthetic Beauty" class="w-full h-full object-cover object-center hero-img-scale blur-sm opacity-60 md:blur-none md:opacity-100">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-light via-brand-light/80 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+            <div class="max-w-xl fade-in-up">
+                <p class="uppercase tracking-[0.4em] text-xs text-brand-rose mb-6 font-semibold border-l-2 border-brand-rose pl-3">Awaken Your True Beauty</p>
+                <h1 class="font-serif text-5xl md:text-7xl leading-[1.1] mb-8">The <span class="text-brand-rose italic">DreaM</span><br>You Deserve.</h1>
+                <p class="text-gray-600 mb-10 text-lg md:text-xl font-light leading-relaxed">Experience the peak of luxurious skincare with our signature cream. Formulated with nature's rarest ingredients to give you timeless, glowing skin.</p>
+                <a href="shop.html" class="inline-block bg-brand-dark text-white px-10 py-4 uppercase tracking-[0.2em] text-xs hover:bg-brand-rose transition-all duration-300 shadow-xl hover:shadow-brand-rose/40">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Section -->
+    <section class="py-24 px-6 md:px-12 bg-white relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-pink/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-brand-rose/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 fade-in-up-scroll">
+                <h2 class="font-serif text-3xl md:text-4xl mb-6">Pure. Natural. Luxury.</h2>
+                <div class="w-12 h-px bg-brand-rose mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                <div class="text-center group fade-in-up-scroll delay-100 px-4">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-brand-light border border-brand-pink flex items-center justify-center mb-6 text-brand-rose text-2xl group-hover:-translate-y-2 transition-transform duration-300 shadow-sm">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Organic Botanical</h3>
+                    <p class="text-gray-500 font-light text-sm leading-relaxed">Sourced from the finest botanicals around the world to ensure absolute purity and potency.</p>
+                </div>
+                <div class="text-center group fade-in-up-scroll delay-200 px-4">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-brand-light border border-brand-pink flex items-center justify-center mb-6 text-brand-rose text-2xl group-hover:-translate-y-2 transition-transform duration-300 shadow-sm">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Deep Hydration</h3>
+                    <p class="text-gray-500 font-light text-sm leading-relaxed">Advanced moisture-lock technology for glowing, plump skin that lasts entirely throughout the day.</p>
+                </div>
+                <div class="text-center group fade-in-up-scroll delay-300 px-4">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-brand-light border border-brand-pink flex items-center justify-center mb-6 text-brand-rose text-2xl group-hover:-translate-y-2 transition-transform duration-300 shadow-sm">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">Clinically Proven</h3>
+                    <p class="text-gray-500 font-light text-sm leading-relaxed">Dermatologist tested to be gentle and effective for all skin types, including sensitive skin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Showcase -->
+    <section class="py-24 px-6 md:px-12 bg-brand-light/50 border-t border-brand-pink/30">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/2 fade-in-up-scroll">
+                <div class="relative p-4 md:p-6 before:absolute before:inset-0 before:border before:border-brand-rose before:translate-x-3 before:translate-y-3 md:before:translate-x-6 md:before:translate-y-6">
+                    <img src="assets/images/product_img.png" alt="DreaM Cream Jar" class="relative z-10 w-full shadow-2xl h-[400px] object-cover object-center">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 fade-in-up-scroll delay-200">
+                <span class="text-brand-rose uppercase tracking-[0.3em] text-[10px] font-semibold mb-3 block">Our Masterpiece</span>
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">The <i class="text-brand-rose">Signature</i> Cream</h2>
+                <p class="text-gray-600 font-light mb-8 leading-relaxed text-sm md:text-base">A buttery texture that melts straight into your skin. The Signature Cream is not just skincare; it's a daily ritual of self-care. Formulated with rich rose extract and pure aloe vera to rejuvenate, restore, and glow like never before.</p>
+                
+                <ul class="mb-10 space-y-4 font-light text-sm text-brand-dark">
+                    <li class="flex items-center gap-4"><span class="w-6 h-6 rounded-full bg-brand-pink/50 flex items-center justify-center text-xs text-brand-rose"><i class="fa-solid fa-check"></i></span> Reverses signs of premature aging</li>
+                    <li class="flex items-center gap-4"><span class="w-6 h-6 rounded-full bg-brand-pink/50 flex items-center justify-center text-xs text-brand-rose"><i class="fa-solid fa-check"></i></span> Softens fine lines & evens skin tone</li>
+                    <li class="flex items-center gap-4"><span class="w-6 h-6 rounded-full bg-brand-pink/50 flex items-center justify-center text-xs text-brand-rose"><i class="fa-solid fa-check"></i></span> Leaves skin luminous and naturally radiant</li>
+                </ul>
+
+                <button class="add-to-cart inline-block border border-brand-dark bg-transparent text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 px-10 py-4 uppercase tracking-[0.2em] text-xs" data-name="The Signature DreaM Cream" data-price="85.00" data-img="assets/images/product_img.png">Add to Bag - $85</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <a href="index.html" class="font-serif text-3xl font-semibold tracking-wide flex items-center gap-2 mb-6">
+                    <span class="text-brand-rose">D</span>reaM
+                </a>
+                <p class="font-light max-w-sm text-sm text-gray-300 leading-relaxed">Elevating everyday beauty into extraordinary rituals. Experience DreaM today and discover your natural radiance.</p>
+            </div>
+            <div>
+                <h4 class="font-serif text-lg mb-6 tracking-wide">Explore</h4>
+                <ul class="space-y-3 font-light text-sm text-gray-300">
+                    <li><a href="about.html" class="hover:text-brand-rose transition">Our Story</a></li>
+                    <li><a href="shop.html" class="hover:text-brand-rose transition">The Collection</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-rose transition">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-lg mb-6 tracking-wide">Connect</h4>
+                <div class="flex gap-5 text-xl">
+                    <a href="#" class="text-gray-300 hover:text-brand-rose transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-brand-rose transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-brand-rose transition"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs font-light text-gray-400">
+            <p>&copy; 2026 DreaM Cosmetics. All rights reserved.</p>
+            <p class="mt-2 md:mt-0 uppercase tracking-widest text-[#555]">Made with Love for Beauty</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-[400px] max-w-full bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-500 flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-brand-pink/30">
+            <h2 class="font-serif text-2xl">Your Bag</h2>
+            <button id="close-cart" class="text-gray-400 hover:text-brand-rose transition text-2xl"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="cart-items" class="p-6 flex-1 overflow-y-auto space-y-6">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="p-6 border-t border-brand-pink/30 bg-brand-light/50">
+            <div class="flex justify-between font-serif text-xl mb-6 text-brand-dark">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="w-full bg-brand-dark text-white py-4 uppercase tracking-[0.2em] text-xs hover:bg-brand-rose transition-colors">Checkout Securely</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="fixed inset-0 bg-brand-dark/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300 cursor-pointer"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
